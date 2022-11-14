@@ -2,6 +2,7 @@ import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:todolist/screens/tasks.dart';
+import 'package:todolist/screens/todo.dart';
 import 'package:todolist/utility/clippers.dart';
 
 class HomePage extends StatelessWidget {
@@ -225,7 +226,10 @@ class HomePage extends StatelessWidget {
       )),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromARGB(255, 31, 29, 111),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const TodoScreen()));
+        },
         child: const Icon(FeatherIcons.plus),
       ),
     );
